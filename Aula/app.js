@@ -5,10 +5,12 @@ let input2 = document.getElementById('input2');
 if (button) {
     button.addEventListener('click', () => {
         if (input1 && input2) {
-            console.log("Amo Suco" + soma(Number(input1.value), Number(input2.value)));
+            console.log(somaNumeros(Number(input1.value), Number(input2.value), true, "O valor é: "));
         }
     });
 }
-function soma(num1, num2) {
+function somaNumeros(num1, num2, print, frase) {
+    if (print)
+        console.log(frase + (num1 + num2));
     return num1 + num2;
 }
